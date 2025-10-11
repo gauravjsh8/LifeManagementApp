@@ -1,0 +1,28 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LifeManagementApp.NotePage"
+             Title="Edit Note">
+
+    <VerticalStackLayout Padding="20">
+        <Editor x:Name="NoteEditor"
+                AutoSize="TextChanges"
+                Placeholder="Type your note here..."
+                HeightRequest="200" />
+
+         <HorizontalStackLayout Spacing="10" Margin="0,20,0,0">
+            <Button Text="Save"
+                    Clicked="OnSaveClicked"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    CornerRadius="10"
+                    WidthRequest="100"/>
+
+            <Button Text="Delete"
+                    Clicked="OnDeleteClicked"
+                    BackgroundColor="#E53935"
+                    TextColor="White"
+                    CornerRadius="10"
+                    WidthRequest="100"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

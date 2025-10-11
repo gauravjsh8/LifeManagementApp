@@ -1,0 +1,29 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LifeManagementApp.AboutPage"
+             Title="About">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+
+            <Label Text="About This App"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="LifeManagementApp is a simple note-taking application built using .NET MAUI. You can create, save, and delete notes easily. It’s designed as part of a Life Management system project."
+                   FontSize="14"
+                   LineBreakMode="WordWrap" />
+
+            <Label Text="Version 1.0"
+                   FontSize="12"
+                   TextColor="Gray"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Developed by: Gaurav Joshi"
+                   FontSize="12"
+                   TextColor="Gray"
+                   HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

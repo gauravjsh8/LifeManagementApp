@@ -1,0 +1,1 @@
+C:\Users\Dell\Desktop\Training\C#\LifeManagementApp\LifeManagementApp\LifeManagementApp.csproj;x64

@@ -1,0 +1,26 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LifeManagementApp.MainPage"
+             Title="My Notes">
+
+    <VerticalStackLayout Padding="20" Spacing="10">
+
+        <HorizontalStackLayout Spacing="10">
+            <Button Text="Add Note" Clicked="OnAddNoteClicked" />
+            <Button Text="About" Clicked="OnAboutClicked" />
+        </HorizontalStackLayout>
+
+        <CollectionView x:Name="NotesList" SelectionMode="Single" SelectionChanged="OnNoteSelected">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="5" Padding="10" BorderColor="Gray">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding Text}" LineBreakMode="TailTruncation" />
+                            <Label Text="{Binding Date}" FontSize="10" TextColor="Gray" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
