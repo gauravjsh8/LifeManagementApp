@@ -9,6 +9,9 @@
     <MauiXaml Update="AboutPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="JokePage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="NotePage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
