@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using LifeManagementApp.Interfaces;
+using LifeManagementApp.Services;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace LifeManagementApp
 {
@@ -16,8 +19,13 @@ namespace LifeManagementApp
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
+
+            builder.Services.AddHttpClient<IJokeService, JokeApiService>();
+
+            builder.Services.AddTransient<MainPage>();
+            builder.Services.AddTransient<JokePage>();
 
             return builder.Build();
         }

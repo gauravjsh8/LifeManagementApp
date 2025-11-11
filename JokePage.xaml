@@ -1,0 +1,18 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LifeManagementApp.JokePage"
+             Title="Joke of the Day">
+
+    <VerticalStackLayout Padding="20" Spacing="10">
+        <Button Text="Load Jokes" Clicked="OnLoadJokesClicked" />
+        <CollectionView x:Name="JokesList">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="10" Margin="5" BorderColor="Gray">
+                        <Label Text="{Binding}" LineBreakMode="WordWrap" />
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
