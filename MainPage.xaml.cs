@@ -19,7 +19,7 @@ namespace LifeManagementApp
 
         private void LoadNotes()
         {
-            NotesList.ItemsSource = Note.LoadAll().OrderByDescending(n => n.Date);
+            NotesList.ItemsSource = await _noteService.GetAllAsync();
         }
 
         private async void OnAddNoteClicked(object sender, EventArgs e)

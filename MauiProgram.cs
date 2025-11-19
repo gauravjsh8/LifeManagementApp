@@ -26,6 +26,10 @@ namespace LifeManagementApp
 
             builder.Services.AddTransient<MainPage>();
             builder.Services.AddTransient<JokePage>();
+            builder.Services.AddSingleton<INoteService, NoteService>();
+            builder.Services.AddTransient<NotePage>();
+
+            builder.Services.AddDbContext<AppDbContext>();
 
             return builder.Build();
         }

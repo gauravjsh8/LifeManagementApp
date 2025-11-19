@@ -14,12 +14,12 @@ namespace LifeManagementApp
 
             if (note != null)
             {
-                 Title = "Edit Note";
+                Title = "Edit Note";
                 NoteEditor.Text = note.Text;
             }
             else
             {
-                 Title = "New Note";
+                Title = "New Note";
             }
         }
 
@@ -29,9 +29,10 @@ namespace LifeManagementApp
                 return;
 
             if (currentNote == null)
-                Note.Save(NoteEditor.Text);
+                await _noteService.AddAsync(NoteEditor.Text);
             else
-                File.WriteAllText(currentNote.Filename, NoteEditor.Text);
+                currentNote.Text = NoteEditor.Text;
+            await _noteService.UpdateAsync(currentNote);
 
             await Navigation.PopAsync();
         }
@@ -39,7 +40,7 @@ namespace LifeManagementApp
         private async void OnDeleteClicked(object sender, EventArgs e)
         {
             if (currentNote != null)
-                currentNote.Delete();
+                await _noteService.DeleteAsync(currentNote);
 
             await Navigation.PopAsync();
         }

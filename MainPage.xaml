@@ -9,22 +9,20 @@
             <Button Text="Add Note" Clicked="OnAddNoteClicked" />
             <Button Text="About" Clicked="OnAboutClicked" />
             <Button Text="Joke of the Day" Clicked="OnJokeClicked" />
-            <!-- NEW BUTTON -->
         </HorizontalStackLayout>
 
         <CollectionView x:Name="NotesList" SelectionMode="Single" SelectionChanged="OnNoteSelected">
             <CollectionView.ItemTemplate>
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Frame Margin="5" Padding="10" BorderColor="Gray">
-                        <VerticalStackLayout>
-                            <Label Text="{Binding Text}" LineBreakMode="TailTruncation" />
-                            <Label Text="{Binding Date}" FontSize="10" TextColor="Gray" />
-                        </VerticalStackLayout>
-                    </Frame>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="5" Padding="10" BorderColor="Gray">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Text}" LineBreakMode="TailTruncation" />
+                                <Label Text="{Binding Date}" FontSize="10" TextColor="Gray" />
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
         </CollectionView>
     </VerticalStackLayout>
-
 </ContentPage>
